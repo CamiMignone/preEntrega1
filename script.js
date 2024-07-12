@@ -32,7 +32,7 @@ function calculoCuota(montoPrestamo, interesMensual, numeroCuotas, tipoCuota) {
     if (interesMensual === 0) {
         return montoPrestamo / numeroCuotas;
     }
-    if (tipoCuota === 'fija') {
+    if (tipoCuota === "fija") {
         return (montoPrestamo * interesMensual) / (1 - Math.pow(1 + interesMensual, -numeroCuotas));
     } else {
         // Para cuotas variables, inicializamos con un pago mensual base menor
